@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID AREA - 1</title>
+    <style>
+        #main {
+            padding: 50px;
+            width: 65%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 150px);
+            gap: 20px;
+            grid-template-areas:
+                "one one two two"
+                "three four four four"
+                "five five five five";
+        }
+
+        #main>div {
+            color: white;
+            background-color: #444444;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 30px;
+            font-size: 35px;
+            border-radius: 10px;
+        }
+
+        #main>div:nth-child(1) {
+
+            grid-area: one;
+        }
+
+        #main>div:nth-child(2) {
+            grid-area: two;
+        }
+
+        #main>div:nth-child(3) {
+            grid-area: three;
+        }
+
+        #main>div:nth-child(4) {
+            grid-area: four;
+        }
+
+        #main>div:nth-child(5) {
+            grid-area: five;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+</body>
+
+</html>
